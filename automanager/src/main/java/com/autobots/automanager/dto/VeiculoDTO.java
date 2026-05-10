@@ -13,12 +13,14 @@ public class VeiculoDTO extends RepresentationModel<VeiculoDTO> {
     private Integer ano;
     private Long proprietarioId;
     private TipoVeiculo tipo;
+    private String mensagemSecreta;
 
     public VeiculoDTO() {
     }
 
     public VeiculoDTO(Long id, String placa, String modelo,
-            String marca, Integer ano, Long proprietarioId, TipoVeiculo tipo) {
+            String marca, Integer ano,
+            Long proprietarioId, TipoVeiculo tipo) {
         this.id = id;
         this.placa = placa;
         this.modelo = modelo;
@@ -56,6 +58,10 @@ public class VeiculoDTO extends RepresentationModel<VeiculoDTO> {
         return tipo;
     }
 
+    public String getMensagemSecreta() {
+        return mensagemSecreta;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -82,5 +88,9 @@ public class VeiculoDTO extends RepresentationModel<VeiculoDTO> {
 
     public void setTipo(TipoVeiculo tipo) {
         this.tipo = tipo;
+    }
+
+    public void setMensagemSecreta(String mensagemSecreta) {
+        this.mensagemSecreta = mensagemSecreta;
     }
 }

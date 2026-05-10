@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.autobots.automanager.dto.VeiculoDTO;
 import com.autobots.automanager.entidades.Usuario;
 import com.autobots.automanager.entidades.Veiculo;
+import com.autobots.automanager.enumeracoes.TipoVeiculo;
 import com.autobots.automanager.repositorios.UsuarioRepository;
 import com.autobots.automanager.repositorios.VeiculoRepository;
 
@@ -65,7 +66,7 @@ public class VeiculoServico {
 
     private VeiculoDTO converterParaDTO(Veiculo veiculo) {
 
-        return new VeiculoDTO(
+        VeiculoDTO dto = new VeiculoDTO(
                 veiculo.getId(),
                 veiculo.getPlaca(),
                 veiculo.getModelo(),
@@ -73,6 +74,12 @@ public class VeiculoServico {
                 veiculo.getAno(),
                 veiculo.getProprietario() != null ? veiculo.getProprietario().getId() : null,
                 veiculo.getTipo());
+
+        if (veiculo.getTipo() == TipoVeiculo.CIVIC_G10) {
+            dto.setMensagemSecreta("CIVIC G10 detectado: veículo mais brabo que existe");
+        }
+
+        return dto;
     }
 
     private Veiculo converterParaEntidade(VeiculoDTO dto) {
