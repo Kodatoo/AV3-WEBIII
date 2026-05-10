@@ -1,0 +1,88 @@
+POSTS 
+
+### empresa 
+{
+  "nome": "Toyota Brasil",
+  "cnpj": "12.345.678/0001-99"
+}
+
+### usuarios
+{
+  "nome": "João Silva",
+  "tipoUsuario": "FUNCIONARIO",
+  "empresaId": 1
+}
+
+### rg
+
+{
+  "tipo": "RG",
+  "numero": "1500"
+}
+
+### cpf 
+{
+  "tipo": "CPF",
+  "numero": "00000000001"
+}
+
+### CNPJ
+
+{
+  "tipo": "CNPJ",
+  "numero": "12345678000199"
+}
+
+### VEICULO
+{
+  "placa": "ABC1234",
+  "modelo": "Corolla",
+  "marca": "Toyota",
+  "ano": 2022,
+  "proprietarioId": 1,
+  "tipo": "SEDAN"
+}
+
+### CLIENTES
+{
+  "nome": "Carlos Souza",
+  "nomeSocial": "Carlos",
+  "dataNascimento": "1995-01-10",
+  "dataCadastro": "2026-05-09",
+  "documentos": [
+    {
+      "tipo": "CPF",
+      "numero": "11122233344"
+    }
+  ],
+  "telefones": [
+    {
+      "ddd": "11",
+      "numero": "999999999"
+    }
+  ],
+  "endereco": {
+    "rua": "Rua A",
+    "numero": "100",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "bairro": "Centro",
+    "codigoPostal": "01001000",
+    "informacoesAdicionais": "Apartamento"
+  }
+}
+
+### serviços
+
+{
+  "descricao": "Troca de óleo",
+  "valor": 150.0
+}
+
+### MERCADORIAS 
+
+{
+  "nome": "Filtro de óleo",
+  "quantidade": 10,
+  "valor": 35.5
+}
