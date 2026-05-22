@@ -70,3 +70,18 @@ public class AutomanagerApplication {
 	}
 
 }
+
+	@Override
+	public void run(String... args) throws Exception {
+		BCryptPasswordEncoder codificador = new BCryptPasswordEncoder();
+		Usuario usuario = new Usuario();
+		usuario.setNome("administrador");
+		usuario.getPerfis().add(Perfil.ROLE_ADMIN);
+		Credencial credencial = new Credencial();
+		credencial.setNomeUsuario("admin");
+		String senha = "123456";
+		credencial.setSenha(codificador.encode(senha));
+		usuario.setCredencial(credencial);
+		repositorio.save(usuario);
+	}
+}
